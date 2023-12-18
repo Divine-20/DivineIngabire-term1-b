@@ -17,10 +17,7 @@ public class BackendCalculatorApplicationEndToEndTests {
     @Test
     public void testApiEndpoint() {
         String url = "http://localhost:" + port + "/api/v1/doMath_calculations";
-
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
-
         assertEquals(200, responseEntity.getStatusCodeValue());
-
     }
 }
