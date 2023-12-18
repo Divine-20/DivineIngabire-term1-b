@@ -31,10 +31,6 @@ public class MathOperationImpl implements IMathOperation {
                 return Math.exp(operand1);
             case "**":
                 return Math.pow(operand1, operand2);
-            case "log":
-                return operand1 * Math.log10(operand2);
-            case "ln":
-                return operand1 * Math.log(operand2);
             default:
                 throw new RuntimeException("Unknown Operation");
         }
