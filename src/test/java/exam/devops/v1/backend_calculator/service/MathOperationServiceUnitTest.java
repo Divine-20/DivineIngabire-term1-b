@@ -20,13 +20,13 @@ public class MathOperationServiceUnitTest {
         double operand1 = 10;
         double operand2 = 14;
         String operation = "+";
-        double expectedResult = 24.0;
+        double calcResponse = 24.0;
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualMathOperation = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualMathOperation).isEqualTo(expectedResult);
+        assertThat(actualMathOperation).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
     @Test
@@ -34,13 +34,13 @@ public class MathOperationServiceUnitTest {
         double operand1 = 20;
         double operand2 = 7;
         String operation = "-";
-        double expectedResult = 13.0;
+        double calcResponse = 13.0;
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
     @Test
@@ -48,13 +48,13 @@ public class MathOperationServiceUnitTest {
         double operand1 = 8;
         double operand2 = 5;
         String operation = "*";
-        double expectedResult = 40.0;
+        double calcResponse = 40.0;
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
     @Test
@@ -62,13 +62,13 @@ public class MathOperationServiceUnitTest {
         double operand1 = 40;
         double operand2 = 5;
         String operation = "/";
-        double expectedResult = 8.0;
+        double calcResponse = 8.0;
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
 
@@ -77,13 +77,13 @@ public class MathOperationServiceUnitTest {
         double operand1 = 17;
         double operand2 = 4;
         String operation = "%";
-        double expectedResult = 1.0;
+        double calcResponse = 1.0;
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
     @Test
@@ -91,39 +91,39 @@ public class MathOperationServiceUnitTest {
         double operand1 = 3;
         double operand2 = 4;
         String operation = "**";
-        double expectedResult = Math.pow(3, 4);
+        double calcResponse = Math.pow(3, 4);
 
-        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, operand2, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, operand2, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, operand2, operation);
     }
     @Test
     public void square_root_operation_success() throws InvalidOperationException {
         double operand1 = 25;
         String operation = "sqrt";
-        double expectedResult = 5.0;
+        double calcResponse = 5.0;
 
-        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, 0, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, 0, operation);
     }
     @Test
     public void exponential_operation_success() throws InvalidOperationException {
         double operand1 = 2;
         String operation = "exp";
-        double expectedResult = Math.exp(2);
+        double calcResponse = Math.exp(2);
 
-        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, 0, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, 0, operation);
     }
 
@@ -131,13 +131,13 @@ public class MathOperationServiceUnitTest {
     public void absolute_value_operation_success() throws InvalidOperationException {
         double operand1 = -15;
         String operation = "abs";
-        double expectedResult = 15.0;
+        double calcResponse = 15.0;
 
-        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(expectedResult);
+        when(mathOperationService.doMath(operand1, 0, operation)).thenReturn(calcResponse);
 
         double actualResult = mathOperationService.doMath(operand1, 0, operation);
 
-        assertThat(actualResult).isEqualTo(expectedResult);
+        assertThat(actualResult).isEqualTo(calcResponse);
         verify(mathOperationService).doMath(operand1, 0, operation);
     }
     @Test(expected = RuntimeException.class)
